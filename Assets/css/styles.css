@@ -4,62 +4,124 @@
     --mediumBlue: #435977;
     --deepBlue: #31333e;
     --darkGray: #31343d;
+    --offWhite: #edeef6;
 }
 
-/* Typography - Size & Color */
-h1, h2, p {
+/* Global */
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--offWhite);
+}
+
+/* Typography */
+
+h1, h2, p, a {
     color: var(--darkGray);
-}
-
-nav {
-    color: var(--aqua);
 }
 
 /* Header */
 header {
     background-color: var(--darkGray);
+    padding-top: 20px;
 }
 
 header h1 {
     background-color: var(--aqua);
+    padding: 5px 5px 5px 75px;
+}
+
+/* Nav */
+
+nav {
+    color: var(--aqua);
     text-align: center;
+    margin: 10px 0 20px 0;
 }
 
-.phone {
-    position: relative;
-    max-width: 80%;
-    margin: 3rem auto -12rem;
+nav ul li {
+    display: inline;
+    margin-bottom: 2px;
 }
 
-.phone+.phone {
-    display: none;
+nav ul li a {
+    color: var(--aqua);
+    border-bottom: 3px solid var(--aqua);
+    text-decoration: none;
+    padding: 3px 5px;
+}
+
+/* Banner */
+
+.banner {
+    background-image: url(../img/placeimg_1000_300_tech.jpeg);
+    background-size: cover;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner p {
+    background-color: var(--aqua);
+    padding: 5px;
+}
+
+/* Main */
+
+main {
+    padding: 0 40px;
+}
+
+main p {
+    margin-bottom: 10px;
 }
 
 /* Sections */
-.section {
-    padding: 8rem 0 7rem;
-    text-align: center;
+
+section {
+    margin-bottom: 40px;
 }
 
-.section-heading,
-.section-description {
-    margin-bottom: 1.2rem;
+.sectionTitle h2 {
+    border-bottom: 3px solid var(--mediumBlue);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.sectionBody {
+    margin-top: 5px;
+}
+
+/* Projects */
+
+.project {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
 }
 
 /* Footer */
 footer {
-    border-bottom: 1px solid #ddd;
+    margin-bottom: 40px;
+    padding: 0 40px;
+    text-align: right;
 }
 
-/* Categories */
-.categories {
-    background-image: url('../images/values-bg.jpg');
-    background-size: cover;
-    color: #fff;
+footer li {
+    margin-bottom: 15px;
 }
 
-.categories .section-description {
-    margin-bottom: 4rem;
+footer a {
+    border-bottom: 3px solid var(--mediumBlue);
+    text-decoration: none;
+    padding: 3px 5px;
 }
 
 /* Larger than mobile */
