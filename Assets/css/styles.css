@@ -122,7 +122,7 @@ section {
 .projectCard {
     height: 200px;
     margin-bottom: 20px;
-    border: 3px solid var(--aqua);
+    border: 5px solid var(--aqua);
     display: flex;
     align-items: flex-end;
     background-size: cover;
