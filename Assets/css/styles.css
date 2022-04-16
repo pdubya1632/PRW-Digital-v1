@@ -20,10 +20,26 @@ body {
     background-color: var(--offWhite);
 }
 
-/* Typography */
+/* Typography - Sizing & Color */
 
 h1, h2, p, a {
     color: var(--darkGray);
+}
+
+h3, h4 {
+    font-weight: normal;
+}
+
+h2 {
+    font-size: 1.9rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+h4 {
+    font-size: .8rem;
 }
 
 /* Header */
@@ -34,7 +50,8 @@ header {
 
 header h1 {
     background-color: var(--aqua);
-    padding: 5px 5px 5px 75px;
+    padding: 5px;
+    text-align: center;
 }
 
 /* Nav */
@@ -71,6 +88,7 @@ nav ul li a {
 .banner p {
     background-color: var(--aqua);
     padding: 5px;
+    font-size: 1.5rem;
 }
 
 /* Main */
@@ -102,17 +120,17 @@ section {
 /* Projects */
 
 .projectCard {
-    width: 100%;
     height: 200px;
     margin-bottom: 20px;
     border: 3px solid var(--aqua);
     display: flex;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .projectTitle {
     background-color: var(--aqua);
     padding: 10px;
+    margin-bottom: 20px;
 }
 
 .projectTitle h3 {
