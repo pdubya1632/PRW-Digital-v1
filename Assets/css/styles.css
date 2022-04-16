@@ -92,7 +92,7 @@ section {
 .sectionTitle h2 {
     border-bottom: 3px solid var(--mediumBlue);
     padding-bottom: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .sectionBody {
@@ -101,10 +101,22 @@ section {
 
 /* Projects */
 
-.project {
+.projectCard {
     width: 100%;
     height: 200px;
     margin-bottom: 20px;
+    border: 3px solid var(--aqua);
+    display: flex;
+    align-items: center;
+}
+
+.projectTitle {
+    background-color: var(--aqua);
+    padding: 10px;
+}
+
+.projectTitle h3 {
+    margin-bottom: 5px;
 }
 
 /* Footer */
