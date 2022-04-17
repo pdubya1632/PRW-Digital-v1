@@ -22,8 +22,12 @@ body {
 
 /* Typography - Sizing & Color */
 
-h1, h2, p, a {
+h1, p, a {
     color: var(--darkGray);
+}
+
+h2 {
+    color: var(--mediumBlue);
 }
 
 h3, h4 {
@@ -38,14 +42,10 @@ h3 {
     font-size: 1.2rem;
 }
 
-h4 {
-    font-size: .8rem;
-}
-
 /* Header */
 header {
     background-color: var(--darkGray);
-    padding-top: 20px;
+    padding: 20px 0;
 }
 
 header h1 {
@@ -59,12 +59,12 @@ header h1 {
 nav {
     color: var(--aqua);
     text-align: center;
-    margin: 10px 0 20px 0;
+    margin-top: 10px;
 }
 
 nav ul li {
     display: inline;
-    margin-bottom: 2px;
+    margin: 0 5px 2px 5px;
 }
 
 nav ul li a {
@@ -72,6 +72,11 @@ nav ul li a {
     border-bottom: 3px solid var(--aqua);
     text-decoration: none;
     padding: 3px 5px;
+}
+
+nav ul li a:hover {
+    color: var(--offWhite);
+    border-bottom: 3px solid var(--offWhite);
 }
 
 /* Banner */
@@ -88,7 +93,7 @@ nav ul li a {
 .banner p {
     background-color: var(--aqua);
     padding: 5px;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
 }
 
 /* Main */
@@ -117,7 +122,7 @@ section {
     margin-top: 5px;
 }
 
-/* Projects */
+/* Project Cards */
 
 .projectCard {
     height: 200px;
@@ -126,23 +131,70 @@ section {
     display: flex;
     align-items: flex-end;
     background-size: cover;
+    position: relative;
+}
+
+.projectCard:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+}
+
+.projectCard:hover::before {
+    opacity: 1;
 }
 
 .projectTitle {
     background-color: var(--aqua);
     padding: 10px;
     margin-bottom: 20px;
+    display: block;
+    z-index: 1;
+    text-decoration: none;
 }
 
-.projectTitle h3 {
-    margin-bottom: 5px;
+.projectTitle::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: ' ';
 }
 
-.projectOne { background-image: url(../img/placeimg_1000_500_nature-1.jpeg); }
-.projectTwo { background-image: url(../img/placeimg_1000_500_nature-2.jpeg); }
-.projectThree { background-image: url(../img/placeimg_1000_500_nature-3.jpeg); }
-.projectFour { background-image: url(../img/placeimg_1000_500_nature-4.jpeg); }
-.projectFive { background-image: url(../img/placeimg_1000_500_nature-5.jpeg); }
+.projectTitle span {
+    font-size: .8rem;
+}
+
+.projectOne:before {
+    background: url(../img/placeimg_1000_500_nature-1.jpeg) no-repeat;
+    background-size: cover;
+}
+
+.projectTwo:before {
+    background: url(../img/placeimg_1000_500_nature-2.jpeg) no-repeat;
+    background-size: cover;
+}
+
+.projectThree:before {
+    background: url(../img/placeimg_1000_500_nature-3.jpeg) no-repeat;
+    background-size: cover;
+}
+
+.projectFour:before {
+    background: url(../img/placeimg_1000_500_nature-4.jpeg) no-repeat;
+    background-size: cover;
+}
+
+.projectFive:before {
+    background: url(../img/placeimg_1000_500_nature-5.jpeg) no-repeat;
+    background-size: cover;
+}
 
 /* Footer */
 
@@ -154,6 +206,7 @@ footer {
 
 footer li {
     margin-bottom: 15px;
+    display: inline;
 }
 
 footer a {
@@ -162,17 +215,89 @@ footer a {
     padding: 3px 5px;
 }
 
-/* Larger than mobile */
-@media (min-width: 400px) {}
-
-/* Larger than phablet */
-@media (min-width: 550px) {}
+footer a:hover {
+    border-bottom: 3px solid var(--aqua);
+}
 
 /* Larger than tablet */
-@media (min-width: 750px) {}
 
-/* Larger than desktop */
-@media (min-width: 1000px) {}
+@media (min-width: 750px) {
 
-/* Larger than Desktop HD */
-@media (min-width: 1200px) {}
+    /* Header */
+    header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    header h1 {
+        padding-left: 40px;
+        padding-right: 20px;
+    }
+
+    header nav {
+        padding-right: 40px;
+    }
+
+    /* Banner */
+
+    .banner {
+        justify-content: end;
+    }
+
+    .banner p {
+        padding-right: 40px;
+        padding-left: 20px;
+    }
+
+    /* Sections */
+
+    section {
+        display: flex;
+    }
+
+    .sectionTitle {
+        flex: 1 20%;
+        text-align: right;
+        padding-right: 10px;
+    }
+
+    .sectionTitle h2 {
+        border-bottom: none;
+        font-size: 2.2rem;
+    }
+
+    .sectionBody {
+        flex-basis: 80%;
+        border-left: 3px solid var(--mediumBlue);
+        padding-left: 20px;
+    }
+
+    /* Projects */
+
+    #projects .sectionBody {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
+    .projectCard {
+        flex-basis: 48%;
+    }
+
+    .projectOne {
+        flex-basis: 100%;
+    }
+
+    /* Footer */
+
+    footer {
+        display: flex;
+        text-align: left;
+    }
+
+    footer li {
+        margin-right: 40px;
+    }
+}

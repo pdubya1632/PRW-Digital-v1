@@ -12,7 +12,7 @@
     />
     <meta name="author" content="Patrick Wright" />
 
-    <link rel="stylesheet" href="Assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
   </head>
 
   <body>
@@ -21,22 +21,23 @@
       <nav>
         <ul>
           <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
+          <li><a href="#projects">Work</a></li>
           <li><a href="#contact">Contact</a></li>
           <li>
             <a href="http://shorturl.at/cCFY9">Resume</a>
           </li>
         </ul>
       </nav>
-      <section class="banner">
-        <p>Cool subtitle here!</p>
-      </section>
     </header>
 
+    <section class="banner">
+      <p>Web Dev For Hire</p>
+    </section>
+
     <main>
-      <section>
+      <section id="about">
         <div class="sectionTitle">
-          <h2>About Me</h2>
+          <h2>About</h2>
         </div>
         <div class="sectionBody">
           <p>
@@ -54,48 +55,53 @@
           </p>
         </div>
       </section>
-      <section>
+      <section id="projects">
         <div class="sectionTitle">
           <h2>Work</h2>
         </div>
-        <div class="sectionBody">
-          <div class="projectCard projectOne">
-            <div class="projectTitle">
-              <h3>Project One</h3>
-              <h4>P-One subtitle</h4>
-            </div>
-          </div>
-          <div class="projectCard projectTwo">
-            <div class="projectTitle">
-              <h3>Project Two</h3>
-              <h4>P-Two subtitle</h4>
-            </div>
-          </div>
-          <div class="projectCard projectThree">
-            <div class="projectTitle">
-              <h3>Project Three</h3>
-              <h4>P-Three subtitle</h4>
-            </div>
-          </div>
-          <div class="projectCard projectFour">
-            <div class="projectTitle">
-              <h3>Project Four</h3>
-              <h4>P-Four subtitle</h4>
-            </div>
-          </div>
-          <div class="projectCard projectFive">
-            <div class="projectTitle">
-              <h3>Project Five</h3>
-              <h4>P-Five subtitle</h4>
-            </div>
-          </div>
-        </div>
+        <ul class="sectionBody">
+          <li class="projectCard projectOne">
+            <a href="#" class="projectTitle">
+              Project One
+              <br />
+              <span>Subtitle</span>
+            </a>
+          </li>
+          <li class="projectCard projectTwo">
+            <a href="#" class="projectTitle">
+              Project Two
+              <br />
+              <span>Subtitle</span>
+            </a>
+          </li>
+          <li class="projectCard projectThree">
+            <a href="#" class="projectTitle">
+              Project Three
+              <br />
+              <span>Subtitle</span>
+            </a>
+          </li>
+          <li class="projectCard projectFour">
+            <a href="#" class="projectTitle">
+              Project Four
+              <br />
+              <span>Subtitle</span>
+            </a>
+          </li>
+          <li class="projectCard projectFive">
+            <a href="#" class="projectTitle">
+              Project Five
+              <br />
+              <span>Subtitle</span>
+            </a>
+          </li>
+        </ul>
       </section>
     </main>
 
-    <footer>
+    <footer id="contact">
       <div class="sectionTitle">
-        <h2>Contact Me</h2>
+        <h2>Contact</h2>
       </div>
       <div class="sectionBody">
         <ul>
@@ -108,6 +114,5 @@
     </footer>
 
     <script src="Assets/js/scripts.js"></script>
-
   </body>
 </html>
